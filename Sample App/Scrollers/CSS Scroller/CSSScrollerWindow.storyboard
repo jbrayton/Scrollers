@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="Gkd-pK-Gli">
+            <objects>
+                <windowController storyboardIdentifier="CSSScrollerWindow" id="RhY-mj-ZHR" sceneMemberID="viewController">
+                    <window key="window" title="CSS Scroller" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="05o-UH-cAt">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="216" y="264" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1536" height="935"/>
+                        <view key="contentView" id="0q6-dO-K68">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="RhY-mj-ZHR" id="i3P-b4-Psx"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="vuD-K6-Bsq" kind="relationship" relationship="window.shadowedContentViewController" id="wy7-SL-8Pv"/>
+                    </connections>
+                </windowController>
+                <customObject id="YWd-mS-kGb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-327" y="-304"/>
+        </scene>
+        <!--Scroller View Controller-->
+        <scene sceneID="G83-Oa-SJW">
+            <objects>
+                <viewController id="vuD-K6-Bsq" customClass="CSSScrollerViewController" customModule="Scrollers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="VRp-fL-kiJ">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="fvA-qr-EaJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-327" y="-409"/>
+        </scene>
+    </scenes>
+</document>
