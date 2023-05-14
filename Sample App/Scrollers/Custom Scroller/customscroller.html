@@ -5,10 +5,43 @@
     <style>
         html, body {
             background-color: #EACF94FF;
+            
+            /*
+                This appear to be necessary in order to make `getBoundingClientRect()`
+                return the correct height.
+             */
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        /* Hide the default scrollbar. */
+        ::-webkit-scrollbar {
+            display: none;
         }
     </style>
 </head>
 <body>
+    
+<script type="text/javascript">
+    function MyAppScrollTo(y) {
+        window.scroll({ top: y, left: 0, behavior: "instant" });
+        return true;
+    }
+
+    function MyAppReportScrollChange() {
+        window.webkit.messageHandlers.callbackHandler.postMessage({"name": "user_scrolled", "parameters": { "position": window.scrollY, "viewHeight": window.innerHeight, "contentHeight": document.body.getBoundingClientRect().height }});
+    }
+
+    window.onscroll = function(evt) {
+        MyAppReportScrollChange();
+    }
+    window.onresize = function(evt) {
+        MyAppReportScrollChange();
+    }
+    window.onload = function(evt) {
+        MyAppReportScrollChange();
+    }
+
+</script>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 

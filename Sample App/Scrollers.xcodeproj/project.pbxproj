@@ -17,6 +17,9 @@
 		21078E0D2A103809001A284D /* customscroller.html in Resources */ = {isa = PBXBuildFile; fileRef = 21078E0C2A103809001A284D /* customscroller.html */; };
 		21078E0F2A103838001A284D /* CustomScrollerWindow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21078E0E2A103838001A284D /* CustomScrollerWindow.storyboard */; };
 		21078E112A103855001A284D /* CustomScrollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21078E102A103855001A284D /* CustomScrollerViewController.swift */; };
+		21078E132A10508F001A284D /* CustomScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21078E122A10508F001A284D /* CustomScroller.swift */; };
+		21078E152A1052BC001A284D /* ScrollingMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21078E142A1052BC001A284D /* ScrollingMessageHandler.swift */; };
+		21078E172A10532F001A284D /* ScrollState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21078E162A10532F001A284D /* ScrollState.swift */; };
 		21E84EA62A102A7000E6C504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E84EA52A102A7000E6C504 /* AppDelegate.swift */; };
 		21E84EAA2A102A7300E6C504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21E84EA92A102A7300E6C504 /* Assets.xcassets */; };
 		21E84EAD2A102A7300E6C504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E84EAB2A102A7300E6C504 /* Main.storyboard */; };
@@ -33,6 +36,9 @@
 		21078E0C2A103809001A284D /* customscroller.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = customscroller.html; sourceTree = "<group>"; };
 		21078E0E2A103838001A284D /* CustomScrollerWindow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomScrollerWindow.storyboard; sourceTree = "<group>"; };
 		21078E102A103855001A284D /* CustomScrollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollerViewController.swift; sourceTree = "<group>"; };
+		21078E122A10508F001A284D /* CustomScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScroller.swift; sourceTree = "<group>"; };
+		21078E142A1052BC001A284D /* ScrollingMessageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingMessageHandler.swift; sourceTree = "<group>"; };
+		21078E162A10532F001A284D /* ScrollState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollState.swift; sourceTree = "<group>"; };
 		21E84EA22A102A7000E6C504 /* Scrollers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrollers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E84EA52A102A7000E6C504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21E84EA92A102A7300E6C504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,9 +60,9 @@
 		21078DF72A102B02001A284D /* Starting Point */ = {
 			isa = PBXGroup;
 			children = (
-				21078DF82A102B45001A284D /* StartingPointWindow.storyboard */,
-				21078DFA2A102BA7001A284D /* StartingPointViewController.swift */,
 				21078DFC2A102D81001A284D /* startingpoint.html */,
+				21078DFA2A102BA7001A284D /* StartingPointViewController.swift */,
+				21078DF82A102B45001A284D /* StartingPointWindow.storyboard */,
 			);
 			path = "Starting Point";
 			sourceTree = "<group>";
@@ -73,9 +79,9 @@
 		21078E022A103273001A284D /* CSS Scroller */ = {
 			isa = PBXGroup;
 			children = (
-				21078E072A10341E001A284D /* CSSScrollerWindow.storyboard */,
-				21078E082A10341E001A284D /* CSSScrollerViewController.swift */,
 				21078E052A10330F001A284D /* cssscroller.html */,
+				21078E082A10341E001A284D /* CSSScrollerViewController.swift */,
+				21078E072A10341E001A284D /* CSSScrollerWindow.storyboard */,
 			);
 			path = "CSS Scroller";
 			sourceTree = "<group>";
@@ -83,9 +89,12 @@
 		21078E0B2A1037B1001A284D /* Custom Scroller */ = {
 			isa = PBXGroup;
 			children = (
-				21078E0E2A103838001A284D /* CustomScrollerWindow.storyboard */,
-				21078E102A103855001A284D /* CustomScrollerViewController.swift */,
 				21078E0C2A103809001A284D /* customscroller.html */,
+				21078E122A10508F001A284D /* CustomScroller.swift */,
+				21078E102A103855001A284D /* CustomScrollerViewController.swift */,
+				21078E142A1052BC001A284D /* ScrollingMessageHandler.swift */,
+				21078E162A10532F001A284D /* ScrollState.swift */,
+				21078E0E2A103838001A284D /* CustomScrollerWindow.storyboard */,
 			);
 			path = "Custom Scroller";
 			sourceTree = "<group>";
@@ -199,7 +208,10 @@
 			files = (
 				21078E0A2A10341E001A284D /* CSSScrollerViewController.swift in Sources */,
 				21078E112A103855001A284D /* CustomScrollerViewController.swift in Sources */,
+				21078E132A10508F001A284D /* CustomScroller.swift in Sources */,
 				21E84EA62A102A7000E6C504 /* AppDelegate.swift in Sources */,
+				21078E172A10532F001A284D /* ScrollState.swift in Sources */,
+				21078E152A1052BC001A284D /* ScrollingMessageHandler.swift in Sources */,
 				21078E042A1032DC001A284D /* YellowBackgroundView.swift in Sources */,
 				21078DFB2A102BA7001A284D /* StartingPointViewController.swift in Sources */,
 			);

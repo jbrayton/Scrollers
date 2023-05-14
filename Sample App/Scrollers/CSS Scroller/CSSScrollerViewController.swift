@@ -23,6 +23,7 @@ class CSSScrollerViewController : NSViewController {
         self.view.addSubview(yellowBackgroundView)
 
         self.webView = WKWebView(frame: self.view.bounds)
+        self.webView.autoresizingMask = [.width, .height]
         self.view.addSubview(self.webView)
         let fileUrl = Bundle.main.url(forResource: "cssscroller", withExtension: "html")!
         let data = try! Data(contentsOf: fileUrl)
