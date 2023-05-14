@@ -67,7 +67,7 @@ The sample project in this repository demonstrates the issue I am facing. If you
 
 **Starting Point:** A window whose webview has a scroller that is not themed when the “Show scroll bars” System Preferences setting is set to “always”.
 
-**CSS Scroller:**: A window whose webview has a themed scroller that highlights when the mouse hovers over the knob but not any other part of the scroller.
+**CSS Scroller:** A window whose webview has a themed scroller that highlights when the mouse hovers over the knob but not any other part of the scroller.
 
 **Custom Scroller:** A window whose webview has a themed scroller that scrolls in a janky manner when Low Power Mode is on.
 
