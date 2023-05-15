@@ -20,6 +20,8 @@ But when the _Show scroll bars_ setting is set to _Always_, the webview looks li
 
 The scroller has a white background even though the web content has a yellow background. I am looking for a way to give the scroller the same background color as that of the webview.
 
+On macOS an app does not have direct access to the `NSScroller` of a `WkWebView`, and it does not seem possible to find the `NSScroller` of a `WKWebView` by traversing the view hierarchy.
+
 ## CSS Scroller Approach
 
 The `-webkit-scrollbar` pseudo-element provides the ability for a scroller to be styled via CSS. The CSS below provides a reasonable approximation of a standard macOS scroller on a yellow background, but it varies in one important respect. The CSS can specify one color for the scroller knob when the mouse is hovering over it, and a different color for the scroller knob when the mouse is not hovering it.
