@@ -20,10 +20,12 @@ class CSSScrollerViewController : NSViewController {
         // that putting solid background behind the scrollable webview does
         // not help.
         self.yellowBackgroundView = YellowBackgroundView(frame: self.view.bounds)
+        self.yellowBackgroundView.autoresizingMask = [.width, .height]
         self.view.addSubview(yellowBackgroundView)
 
         self.webView = WKWebView(frame: self.view.bounds)
         self.webView.autoresizingMask = [.width, .height]
+        self.webView.underPageBackgroundColor = NSColor(red: 0.917000, green: 0.809000, blue: 0.582000, alpha: 1.000000)
         self.view.addSubview(self.webView)
         let fileUrl = Bundle.main.url(forResource: "cssscroller", withExtension: "html")!
         let data = try! Data(contentsOf: fileUrl)

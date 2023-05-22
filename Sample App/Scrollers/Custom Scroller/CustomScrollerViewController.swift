@@ -34,6 +34,7 @@ class CustomScrollerViewController : NSViewController {
         // that putting solid background behind the scrollable webview does
         // not help.
         self.yellowBackgroundView = YellowBackgroundView(frame: self.view.bounds)
+        self.yellowBackgroundView.autoresizingMask = [.width, .height]
         self.view.addSubview(yellowBackgroundView)
 
         let scrollingMessageHandler = ScrollingMessageHandler(customScrollerViewController: self)
@@ -45,6 +46,8 @@ class CustomScrollerViewController : NSViewController {
         
         self.webView = WKWebView(frame: self.view.bounds, configuration: configuration)
         self.webView.autoresizingMask = [.width, .height]
+        self.webView.underPageBackgroundColor = NSColor(red: 0.917000, green: 0.809000, blue: 0.582000, alpha: 1.000000)
+
         self.view.addSubview(self.webView)
         let fileUrl = Bundle.main.url(forResource: "customscroller", withExtension: "html")!
         let data = try! Data(contentsOf: fileUrl)
